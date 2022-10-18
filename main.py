@@ -8,6 +8,8 @@ def attack(char_name, char_class):
         return (f'{char_name} нанёс урон противнику равный {5 + randint(5, 10)}')
     if char_class == 'healer':
         return (f'{char_name} нанёс урон противнику равный {5 + randint(-3, -1)}')
+
+
 def defence(char_name, char_class):
     if char_class == 'warrior':
         return (f'{char_name} блокировал {10 + randint(5, 10)} урона')
@@ -15,6 +17,8 @@ def defence(char_name, char_class):
         return (f'{char_name} блокировал {10 + randint(-2, 2)} урона')
     if char_class == 'healer':
         return (f'{char_name} блокировал {10 + randint(2, 5)} урона')
+
+
 def special(char_name, char_class):
     if char_class == 'warrior': 
         return (f'{char_name} применил специальное умение «Выносливость {80 + 25}»')
@@ -23,9 +27,7 @@ def special(char_name, char_class):
     if char_class == 'healer':
         return (f'{char_name} применил специальное умение «Защита {10 + 30}»')
 
-
-
-
+        
 def start_training(char_name, char_class):
     if char_class == 'warrior':
         print(f'{char_name}, ты Воитель — отличный боец ближнего боя.')
@@ -46,6 +48,7 @@ def start_training(char_name, char_class):
         if cmd == 'special':
             print(special(char_name, char_class))
     return 'Тренировка окончена.'
+    
 
 def choice_char_class():
     approve_choice = None
