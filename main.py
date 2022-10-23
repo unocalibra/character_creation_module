@@ -60,9 +60,9 @@ def start_training(char_name: str,
           'defence — чтобы блокировать атаку противника'
           'или special — чтобы использовать свою суперсилу.')
     print('Если не хочешь тренироваться, введи команду skip.')
-    cmd = None
+    cmd: str = ''
     while cmd != 'skip':
-        cmd: str = input('Введи команду: ')
+        cmd = input('Введи команду: ')
         if cmd == 'attack':
             print(attack(char_name, char_class))
         if cmd == 'defence':
@@ -74,8 +74,8 @@ def start_training(char_name: str,
 
 def choice_char_class() -> str:
     """Выбор класса персонажа."""
-    approve_choice: str = None
-    char_class: str = None
+    approve_choice: str = ''
+    char_class: str = ''
     while approve_choice != 'y':
         char_class = input('Введи название персонажа,'
                            'за которого хочешь играть:'
